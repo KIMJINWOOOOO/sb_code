@@ -20,4 +20,5 @@ artifacts:     #빌드 후에 배포단계로 옮길 파일들.
     - target/springbootApp.jar
     - start.sh         #springbootapp.jar를 동작시킬 명령
     - stop.sh
+    - appspec.yml
   discard-paths: yes           #경로를 무시하겠다.
