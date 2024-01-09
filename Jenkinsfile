@@ -40,9 +40,9 @@ pipeline {
             }
         }
         stage('image build') {
-            steps {
-                sh 'docker build -t ${DOCKERHUB}:${currentBuild.number} .'
-                sh 'docker build -t ${DOCKERHUB}:latest .'
+             steps {
+                sh "docker build -t ${DOCKERHUB}:${currentBuild.number} ."
+                sh "docker build -t ${DOCKERHUB}:latest ."
             }
         }
         
