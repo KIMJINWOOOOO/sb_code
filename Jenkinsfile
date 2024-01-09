@@ -14,30 +14,30 @@ pipeline {
     stages {
         stage('Checkout Github') {
             steps { checkout([$class: 'GitSCM', branches: [[name: '*/main']], extensions: [],
-                userRemoteConfigs: [[credentialsId: GITCREDENTIAL, url: GITWEBADD]]])
+            userRemoteConfigs: [[credentialsId: GITCREDENTIAL, url: GITWEBADD]]])
             }
         }
         
-        post {
+                post {
         
-            failure {
-                echo 'Repository clone failure'
-            }
-            success {
+                failure {
+                    echo 'Repository clone failure'
+                }
+                success {
                 echo 'Repository clone success'
+                }
             }
-        }
         
-        stage('Test') {
-            steps {
-                echo 'Testing..'
+            stage('Test') {
+                steps {
+                    echo 'Testing..'
+                }
             }
-        }
-        stage('Deploy') {
-            steps {
-                echo 'Deploying....'
+            stage('Deploy') {
+                steps {
+                    echo 'Deploying....'
+                }
             }
         }
     }
-}
  
