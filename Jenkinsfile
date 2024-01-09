@@ -1,6 +1,6 @@
 pipeline {
     agent any
-    tool {
+    tools {
         maven 'my_maven'
     }
     environment {
