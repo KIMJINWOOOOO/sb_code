@@ -18,26 +18,29 @@ pipeline {
             }
         }
         
-                post {
+             post {
         
                 failure {
                     echo 'Repository clone failure'
                 }
                 success {
-                echo 'Repository clone success'
-                }
-            }
-        
-            stage('Test') {
-                steps {
-                    echo 'Testing..'
-                }
-            }
-            stage('Deploy') {
-                steps {
-                    echo 'Deploying....'
+                    echo 'Repository clone success'
                 }
             }
         }
+        
+        
+        stage('Test') {
+            steps {
+                echo 'Testing..'
+            }
+        }
+        stage('Deploy') {
+            steps {
+                echo 'Deploying....'
+            }
+        }
     }
+}
+    
  
