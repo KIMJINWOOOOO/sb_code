@@ -4,11 +4,11 @@ pipeline {
         maven 'my_maven'
     }
     environment {
-        GITNAME = 'KIMJINWOOOOO'           #GITHUB 계정
-        GITEMAIL = 'jinwoo3307@gmail.com'   #github email
+        GITNAME = 'KIMJINWOOOOO'           
+        GITEMAIL = 'jinwoo3307@gmail.com'   
         GITWEBADD = 'https://github.com/KIMJINWOOOOO/sb_code.git'
         GITSSHADD = 'git@github.com:KIMJINWOOOOO/sb_code.git'
-        GITCREDENTIAL = 'git_cre'          # 전에 jenkins credential에서 생성했었다.
+        GITCREDENTIAL = 'git_cre'          
     }
     
     stages {
